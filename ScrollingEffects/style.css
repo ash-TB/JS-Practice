@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    font-family: sans-serif;
+}
+
+section{
+    height: 100vh; /*To make the sections take up the whole screen space*/
+    display: flex; /*To make the text centered in sections*/
+    justify-content: center;
+    align-items: center;
+    color: white;
+    /*Add to children if want scroll effect*/
+    /*Where should it snap to? start, middle, bottom*/
+    scroll-snap-align: start; 
+}
+
+.container{
+    /* Scroll horizontal(x) and/or vertical(y)*/
+    /*mandatory means as soon as scroll, will always snap to spec location*/
+    /*proximity is more flexible and will only snap if close to edge point*/
+    scroll-snap-type: y mandatory; /*Add to parent if want scroll effect*/
+    height: 100vh; /*Needed to that takes up whole page and force scroll effect*/
+    overflow-y: scroll; /*Needed so that the page can overflow forcing scroll and snap effect*/
+}
+
+.one{
+    background-color: cadetblue;
+}
+
+.two{
+    background-color: darkgoldenrod;
+}
+
+.three{
+    background-color:lightcoral
+}
+
+.four{
+    background-color: seagreen;
+}
